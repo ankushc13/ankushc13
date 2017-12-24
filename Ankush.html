@@ -1,0 +1,408 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Slabo+27px" rel="stylesheet">
+
+  <style type="text/css">
+  .fontarvo{
+  font-family:"Comic Sans MS", cursive, sans-serif;
+  }
+  
+  .page-scroll{
+  
+  font-weight:bolder;
+  text-transform:uppercase
+  
+  }
+  .fontopensans{
+  
+  font-family: 'Open Sans', sans-serif;
+  
+  
+  }
+.logo_colour
+{ color: #F05A00;}
+div.relative {
+    position: relative;
+    right: 270px;
+	bottom:160px;
+}
+#borderimg { 
+    border: 5px solid transparent;
+    padding: 10px;
+    border-image: url(https://www.w3schools.com/css/border.png) 10 stretch;
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid red;
+    border-radius: 4px;
+	color:white;
+}
+html{
+   background:url(http://phutora.com/img/friends3.jpg) no-repeat;
+   background-size: cover;
+   height:100%;
+   background-color: #000;
+}
+* {
+   box-sizing:border-box;
+   -webkit-box-sizing:border-box;
+   -moz-box-sizing:border-box;
+   -webkit-font-smoothing:antialiased;
+   -moz-font-smoothing:antialiased;
+   -o-font-smoothing:antialiased;
+   font-smoothing:antialiased;
+   text-rendering:optimizeLegibility;
+}
+body {
+   color: #C0C0C0;
+   font-family: Arial, san-serif;
+}
+
+
+/* Contact Form Styles */
+h1 {
+   margin: 10px 0 0 0;
+}
+h4{
+   margin: 0 0 20px 0;
+}
+#contact-form {
+   background-color:rgba(72,72,72,0.7);
+   padding: 10px 20px 30px 20px;
+   max-width:100%;
+   float: left;
+   left: 50%;
+   position: absolute;
+   margin-top:30px;
+   margin-left: -260px;
+   border-radius:7px;
+   -webkit-border-radius:7px;
+   -moz-border-radius:7px;
+}
+#contact-form input,   
+#contact-form select,   
+#contact-form textarea,   
+#contact-form label { 
+   font-size: 15px;  
+   margin-bottom: 2px;
+   font-family: Arial, san-serif;
+} 
+#contact-form input,   
+#contact-form select,   
+#contact-form textarea { 
+   width:100%;
+   background: #fff;
+   border: 0; 
+   -moz-border-radius: 4px;  
+   -webkit-border-radius: 4px;  
+   border-radius: 4px;
+   margin-bottom: 25px;  
+   padding: 5px;  
+}  
+#contact-form input:focus,   
+#contact-form select:focus,   
+#contact-form textarea:focus {  
+   background-color: #E5E6E7; 
+}  
+#contact-form textarea {
+   width:100%;
+   height: 150px;
+}
+#contact-form button[type="submit"] {
+   cursor:pointer;
+   width:100%;
+   border:none;
+   background:#991D57;
+   background-image:linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
+   background-image:-moz-linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
+   background-image:-webkit-linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
+   color:#FFF;
+   margin:0 0 5px;
+   padding:10px;
+   border-radius:5px;
+}
+#contact-form button[type="submit"]:hover {
+   background-image:linear-gradient(bottom, #9C215A 0%, #A82767 52%);
+   background-image:-moz-linear-gradient(bottom, #9C215A 0%, #A82767 52%);
+   background-image:-webkit-linear-gradient(bottom, #9C215A 0%, #A82767 52%);
+   -webkit-transition:background 0.3s ease-in-out;
+   -moz-transition:background 0.3s ease-in-out;
+   transition:background-color 0.3s ease-in-out;
+}
+#contact-form button[type="submit"]:active {
+   box-shadow:inset 0 1px 3px rgba(0,0,0,0.5);
+}
+input:required, textarea:required {  
+   box-shadow: none;
+   -moz-box-shadow: none;  
+   -webkit-box-shadow: none;  
+   -o-box-shadow: none;  
+} 
+#contact-form .required {  
+   font-weight:bold;  
+   color: #E5E6E7;      
+}
+
+/* Hide success/failure message
+   (especially since the php is missing) */
+#failure, #success {
+   color: #6EA070; 
+   display:none;  
+}
+
+/* Make form look nice on smaller screens */
+@media only screen and (max-width: 580px) {
+   #contact-form{
+      left: 3%;
+      margin-right: 3%;
+      width: 88%;
+      margin-left: 0;
+      padding-left: 3%;
+      padding-right: 3%;
+   }
+}
+
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<nav id="mainNav" class="navbar navbar-fixed-top" style="">
+        <div class="container-fluid" style="background-color:white">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#amalthea-collapse">
+               <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+               </button>
+
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="amalthea-collapse">
+               <ul class="nav navbar-nav navbar-center">
+                  <li class="active">
+                     <a class="page-scroll fontarvo" href="#home" >Home</a>
+                  </li>
+                  
+                  <li >
+                     <a class="page-scroll fontarvo" href="#about">About ME</a>
+                  </li>
+                  <li >
+                     <a class="page-scroll fontarvo" href="#projects">Projects</a>
+                  </li>
+				  <li >
+					 <a class="page-scroll fontarvo" href="http://www.iitgn.ac.in/student/codingclub/" target="_blank">Coding club IITGN</a>
+				  </li>
+               </ul>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav><br>
+     
+<div class="container" id="home" style="min-height:100vh;;width:100%;background-color:#FFA500;padding:4em">
+  <h1 class="fontarvo" style="text-align:center;font-size:6em;color:white;">Ankush<span class="logo_colour">Chauhan</span></h1>
+  <img class="img-responsive center-block" width="350" src="https://i1.wp.com/umtigrenocinema.com/wp-content/uploads/2017/10/BR2049-01.jpg" style="align:middle;border:none;border-radius:400px;">
+  <h1 class="fontarvo" style="text-align:center;font-size:1.5em;color:white">Technology is teaching us to be human again.</h1> 
+  <br>
+  <br>
+  <h3 class="fontarvo"style="text-align:center;font-size:2em;color:white" ></h3>
+</div>
+
+<div class="container" id="about" style="min-height:150vh;;width:100%;background-color:#ffc14d;padding:4em;">
+
+  <h1 id="borderimg" class="fontarvo " style="text-align:center;color:white;font-size:3em">Allow Me To Introduce Myself</h1>
+  
+  <hr style="width:100%;border-width:3px;line-height:1em">
+ 
+  
+   <h6 style="font-family:monospace;color:black;font-size:1.5em;padding:15px">Hey! I am Ankush Chauhan a first year student in CSE Department at <a href="http://www.iitgn.ac.in">IIT Gandhinagar</a>.I was born on January 13, 1998 in Kota(Rajasthan).</b></h6>
+  <br>
+  
+  
+  <h4 class="fontarvo " style="color:white;font-size:2em;padding:15px;text-align:center">I'm Interested in  </h4>
+  <div class="row">
+  
+  
+ 
+ 
+  <div class="col-lg-6" style="">
+  <img class="center-block"  width="300" style="padding-top:50px;"src="https://www.techdotmatrix.com/wp-content/uploads/2016/10/Programming-languages.jpg">
+  <h1 class="" style="text-align:center;font-size:2em;color:white;font-family:cursive;">Programming</h1>
+  </div>
+   
+  <div class="col-lg-6" style="">
+  <img class="center-block" style="padding-top:50px;"src="https://lh4.googleusercontent.com/proxy/4ERnoF2oYfH_1czQt7FfAVBmBKe7vM19AfbqDZ7KJhPAkJ8Mj1hzCfbTEW8wrva6lIJJylK8HQ599LanF88t57pEEhZzcQfVfu-pguhTP0P5Vq0MLgLOCxwgPaBU8rchI4VsCry3xkfmhj9ID3sGlx7OyiClREw=w601-h400-k-no">
+  <h1 class="" style="text-align:center;font-size:2em;color:white;font-family:cursive;">Computer Science</h1>
+  </div>
+  <div class="col-lg-6" style="">
+  <img class="center-block"  width="350"  style="padding-top:50px;padding-right:50px"src="https://assets.rappler.com/612F469A6EA84F6BAE882D2B94A4B421/img/C9397C6E844F4DC68CDE061100DC1353/rethink-jobs-technology-20170728.jpg">
+  <h1 class="" style="text-align:center;font-size:2em;color:white;font-family:cursive;">Technology</h1>
+  </div>
+   <div class="relative" style="">
+  <img class="center-block"  width="350"  style="padding-bottom:50px;padding-right:50px"src="http://hdwallpaper2013.com/wp-content/uploads/2013/01/Lionel-Messi-2013-LionelMessi-HD-Wallpaper.jpg">
+  <h1 class=""  style="text-align:center;font-size:2em;color:white;font-family:cursive;">Football</h1>
+  </div>
+  
+  
+  
+  
+  </div>
+  
+  
+</div>
+
+<div class="container" id="projects" style="min-height:100vh;;width:100%;background-color:#ff6600;padding:4em;">
+
+  <h1 id="borderimg" class="fontarvo " style="text-align:center;color:white;font-size:2em">Projects</h1>
+  
+  <hr style="width:100%;border-width:3px;line-height:1em">
+   
+  <br>
+  <div class="row">
+  
+  <div class="col-lg-4" style="">
+  <img class="center-block" style="padding-top:50px;"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYeqjg8Efv8UrqkwXQJtlkhFdvNh_jrQGxUHYyiFBTTzpUTqbC">
+  <h1 class="" style="text-align:center;color:white;font-family:cursive;">Drone making at IITgn </h1>
+  </div>
+   <div class="col-lg-4" style="">
+  <img class="center-block" style="padding-top:50px;"src="https://st.depositphotos.com/1429923/4429/v/450/depositphotos_44296795-stock-illustration-vector-concept-of-statistic-and.jpg">
+  <h1 class="" style="text-align:center;color:white;font-family:cursive;">Dashboard app for IITGN students.</h1>
+  
+  
+  
+  
+  
+  
+  </div><br>
+ <div class="col-lg-4" style="">
+ <a href="http:/www.iitgn.ac.in" target="_blank">
+ <img class="center-block" width="250" height="240" src="https://timesofindia.indiatimes.com/thumb/msid-59093509,width-400,resizemode-4/59093509.jpg">
+ <h1 class="" style="text-align:center;color:white;font-family:cursive;">More about IITGN</h1>
+ </a>
+ </div>
+ 
+ 
+  
+</div>
+
+
+
+
+<div class="container" id="contact_me" style=";;width:100%;background-color:#8227b1;padding:4em;height:1200px;">
+
+  <h1 id="borderimg" class="fontarvo " style="text-align:center;color:white;font-size:2em;padding-top:4px;">Contact Me</h1>
+  
+  <div class="row">
+  <div class="col-lg-6" style="padding:2em">
+  <h3 style="color:white;font-family:cursive;">Personal Address</h3>
+  <hr style="width:100%;border-width:3px;line-height:1em">
+  <p class="fontopensans"style="color:white;font-size:1.5em;font-family:cursive;">Shanti Kunj,<br>53<br>Gopal Vihar 2nd,<br>Kota,<br>Rajasthan.</p>
+  </div>
+  
+  <div class="col-lg-6" style="padding:2em">
+  <h3 style="color:white;font-family:cursive;">Contact info</h3>
+  <hr style="width:100%;border-width:3px;line-height:1em">
+  <p class="fontopensans"style="color:white;font-size:1.5em;font-family:cursive;">Email id : ankush.chauhan@iitgn.ac.in<br>Mob no : 9079667764</p>
+  </div>
+
+	<div class="col-lg-8 col-lg-offset-2">
+<div id="contact-form">
+	<div>
+		<h1><a src="https://docs.google.com/forms/d/e/1FAIpQLSenSC5o0aVO2zBtDnJjCcMbfUPMb1-CW938BkP95nfntAx0cA/viewform?usp=sf_link">Form</a></h1> 
+		<h4>Have a question or just want to get in touch? Let's chat.</h4> 
+	</div>
+		<p id="failure">Oopss...message not sent.</p>  
+		<p id="success">Your message was sent successfully. Thank you!</p>
+
+		   <form action="message.php" method="post" enctype="text/plain">
+			<div>
+		      <label for="name">
+		      	<span class="required">Name: *</span> 
+		      	<input type="text" id="name" name="name" value="" placeholder="Your Name" required="required" tabindex="1" autofocus="autofocus" />
+		      </label> 
+			</div>
+			<div>
+		      <label for="email">
+		      	<span class="required">Email: *</span>
+		      	<input type="email" id="email" name="email" value="" placeholder="Your Email" tabindex="2" required="required" />
+		      </label>  
+			</div>
+			<div>		          
+		      <label for="message">
+		      	<span class="required">Message: *</span> 
+		      	<textarea id="message" name="message" placeholder="Please write your message here." tabindex="5" required="required"></textarea> 
+		      </label>  
+			</div>
+			<div>		           
+		      <button name="submit" type="submit" id="submit" >SEND</button> 
+			</div>
+		   </form>
+
+	</div>
+  <hr style="width:100%;border-width:3px;line-height:1em">
+  
+  <br>
+   <br>
+    <br>
+	 <br>
+	  <br>
+	   <br>
+	    <br>
+		 <br>
+		  <br>
+   <br>
+    <br>
+	 <br>
+	  <br>
+	   <br>
+	    <br>
+		 <br>
+		 	  <br>
+   <br>
+    <br>
+	 <br>
+	  <br>
+	   <br>
+	    <br>
+		 <br>
+		 <br>
+	    <br>
+		 <br>
+		 
+  <h2 style="text-align:center;color:white;font-family:cursive;">visit me on</h2>
+  <br>
+  <p>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.facebook.com/Devil.ankush.Chauhan.12" target="_blank">
+  <img src="https://blog.addthiscdn.com/wp-content/uploads/2015/11/logo-facebook.png" width="100" height="100" border style "circle"; style="text-align:center">
+	</a>
+&nbsp;&nbsp;
+	<a href="https://twitter.com/Ankush1210" target="_blank">
+	<img src="http://icons.iconarchive.com/icons/uiconstock/socialmedia/512/Twitter-icon.png" width="100" height="100" border="0" >
+	</a>
+	<a href="https://github.com/ankushc13" target="_blank">
+	<img src="http://www.freeiconspng.com/uploads/git-github-hub-icon-25.png" width="100" height="100" border="0" >
+	</a>
+	</p>
+	</div>
+	</div>
+
+  </div>
+
+</div>
+<h3 style="text-align:center"><i>Thanks! for visiting my page</i></h3>
+
+</body>
+</html>
